@@ -1,0 +1,82 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE generatorConfiguration-->
+<!--		PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"-->
+<!--		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">-->
+
+<!--<generatorConfiguration>-->
+<!--	&lt;!&ndash; 配置数据库连接的包 &ndash;&gt;-->
+<!--	<classPathEntry location="D:\Java\repository\mysql\mysql-connector-java\8.0.19\mysql-connector-java-8.0.19.jar"/>-->
+
+<!--	<context id="MyGererator" targetRuntime="MyBatis3" defaultModelType="flat">-->
+
+<!--		&lt;!&ndash; 这个标签可以去掉注释 &ndash;&gt;-->
+<!--		<commentGenerator>-->
+<!--			&lt;!&ndash; 去掉注释 &ndash;&gt;-->
+<!--			<property name="suppressAllComments" value="true" />-->
+<!--			&lt;!&ndash; 去掉时间戳 &ndash;&gt;-->
+<!--			<property name="suppressDate" value="true" />-->
+<!--		</commentGenerator>-->
+
+
+<!--		&lt;!&ndash; 数据库连接信息 &ndash;&gt;-->
+<!--		<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+<!--			connectionURL="jdbc:mysql://localhost:3306/finance?serverTimezone=GMT%2B8" userId="root"-->
+<!--			password="123456">-->
+<!--			<property name="nullCatalogMeansCurrent" value="true"/>-->
+<!--		</jdbcConnection>-->
+
+<!--		&lt;!&ndash; JAVA JDBC数据类型转换 &ndash;&gt;-->
+<!--		<javaTypeResolver>-->
+<!--			<property name="forceBigDecimals" value="false" />-->
+<!--		</javaTypeResolver>-->
+
+<!--		&lt;!&ndash; javaModelGenerator javaBean配置 targetPackage 输入包名 输出路径 targetProject -->
+<!--			输出项目位置 &ndash;&gt;-->
+<!--		<javaModelGenerator targetPackage="com.mycode.finance.entity"-->
+<!--			targetProject="src\main\java">-->
+<!--			&lt;!&ndash; enableSubPackages 是否开启子包名称 是否在包名后边加上scheme名称 &ndash;&gt;-->
+<!--			<property name="enableSubPackages" value="false" />-->
+<!--			&lt;!&ndash; 在Set中加入.trim &ndash;&gt;-->
+<!--			<property name="trimStrings" value="true" />-->
+<!--		</javaModelGenerator>-->
+
+<!--		&lt;!&ndash; mapper.xml &ndash;&gt;-->
+<!--		<sqlMapGenerator targetPackage="com.mycode.finance.mapper"-->
+<!--			targetProject="src\main\java">-->
+<!--			<property name="enableSubPackages" value="false" />-->
+<!--		</sqlMapGenerator>-->
+
+<!--		&lt;!&ndash; java接口 &ndash;&gt;-->
+<!--		<javaClientGenerator type="XMLMAPPER"-->
+<!--							 targetPackage="com.mycode.finance.mapper" targetProject="src\main\java">-->
+<!--			<property name="enableSubPackages" value="true" />-->
+<!--		</javaClientGenerator>-->
+
+<!--		&lt;!&ndash; 数据表 要根据数据库中的表来生成 &ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="admin" domainObjectName="Admin" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="bank" domainObjectName="Bank" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="bankcard" domainObjectName="Bankcard" />&ndash;&gt;-->
+<!--		<table tableName="admin_permissions" domainObjectName="AdminPermissions" />-->
+<!--&lt;!&ndash;		<table tableName="change_money" domainObjectName="ChangeMoney" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="fund_product" domainObjectName="FundProduct" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="info" domainObjectName="Info" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="loan" domainObjectName="Loan" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="news" domainObjectName="News" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="pay_money" domainObjectName="PayMoney" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="permissions" domainObjectName="Permissions" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="term_financial" domainObjectName="TermFinancial" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="user" domainObjectName="User" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="user_change_money" domainObjectName="UserChangeMoney" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="user_fund_product" domainObjectName="UserFundProduct" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="user_pay_money" domainObjectName="UserPayMoney" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="user_permissions" domainObjectName="UserPermissions" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="user_term_financial" domainObjectName="UserTermFinancial" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<table tableName="flow_of_funds" domainObjectName="FlowOfFunds" />&ndash;&gt;-->
+
+<!--		&lt;!&ndash; <table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer"-->
+<!--			> <property name="useActualColumnNames" value="true"/> <generatedKey column="ID" -->
+<!--			sqlStatement="DB2" identity="true" /> <columnOverride column="DATE_FIELD" -->
+<!--			property="startDate" /> <ignoreColumn column="FRED" /> <columnOverride column="LONG_VARCHAR_FIELD" -->
+<!--			jdbcType="VARCHAR" /> </table> &ndash;&gt;-->
+<!--	</context>-->
+<!--</generatorConfiguration>-->

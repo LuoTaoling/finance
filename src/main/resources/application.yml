@@ -1,0 +1,66 @@
+
+#???????
+spring:
+  datasource:
+    #???
+    username: root
+    #??
+    password: 123456
+    # url??????serverTimezone? GMT%2B8 ????????
+    url: jdbc:mysql://47.109.206.82/finance?useUnicode=true&characterEncoding=utf8
+    # ?????????com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #??druid???????type????
+    type: com.alibaba.druid.pool.DruidDataSource
+    #??????
+#    druid:
+#      initial-size: 5
+#      min-idle: 5
+#      max-active: 20
+#      max-wait: 60000
+#      time-between-eviction-runs-millis: 60000
+#      min-evictable-idle-time-millis: 300000
+#      validation-query: SELECT 1 FROM DUAL
+#      test-while-idle: true
+#      test-on-borrow: false
+#      test-on-return: false
+#      pool-prepared-statements: true
+#      max-pool-prepared-statement-per-connection-size: 20
+#      filters: stat,wall
+#      use-global-data-source-stat: true
+#      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  transaction:
+    rollback-on-commit-failure: true
+    default-timeout: 30
+
+  #??thymeleaf????
+  thymeleaf:
+    prefix: classpath:/static/views/
+    suffix: .html
+    cache: false  # ????
+
+
+# ????
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+#  ??mybatis?????????
+mybatis:
+  #  config-location: classpath:mybatis/mybatis-config.xml
+  # ??sql??????
+  mapper-locations: classpath:com/bjpowernode/finance/mapper/*.xml
+
+# spring boot??mybatis?????sql??
+# configuration:
+#   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  #????
+  port: 8080
+  servlet:
+    session:
+      #session???????2?? 7200?
+      timeout: PT2H
