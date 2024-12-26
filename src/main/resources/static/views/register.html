@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>个人理财系统注册界面</title>
     <!-- 引入bootstrap样式 -->
-    <link th:href="@{/bootstrap/css/bootstrap.css}" rel="stylesheet" type="text/css">
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     <!--图标库-->
-    <link th:href="@{/lyear/css/materialdesignicons.min.css}" rel="stylesheet" type="text/css"/>
+    <link href="/lyear/css/materialdesignicons.min.css" rel="stylesheet" type="text/css"/>
     <!--自定义样式-->
-    <link href="../lyear/css/style.min.css" th:href="@{/lyear/css/style.min.css}" rel="stylesheet" type="text/css"/>
+    <link href="/lyear/css/style.min.css" rel="stylesheet" type="text/css"/>
 
     <style>
         .lear-wrapper {
@@ -97,7 +97,7 @@
                 </div>
             </form>
             <div style="margin-left: 110px">
-                <a th:href="@{/tologin.html}">已有账号？去登录</a>
+                <a href="/views/login.html" onclick="window.location.href='/views/login.html'">已有账号？去登录</a>
             </div>
 
         </div>
@@ -105,13 +105,13 @@
 </div>
 
 <!-- 引入jQuery和bootstrap的js -->
-<script th:src="@{/js/jquery.js}"></script>
-<script th:src="@{/bootstrap/js/bootstrap.js}"></script>
-<script th:src="@{/js/md5.js}"></script>
+<script src="/js/jquery.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
+<script src="/js/md5.js"></script>
 <!-- 点线粒子插件 -->
 <script color="255,0,255" opacity='0.8'
         zIndex="9999" count="99"
-        th:src="@{/js/canvas-nest.js}"></script>
+        src="/js/canvas-nest.js"></script>
 <script>
     var show_num = [];
     $(function () {
